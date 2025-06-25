@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Remover Atuador{% endblock %}
+{% block content %}
+<h2>Remover Atuador</h2>
+<form method="post">
+  <div class="mb-3">
+    <label for="actuator" class="form-label">Selecione um Atuador</label>
+    <select class="form-select" name="actuator" id="actuator">
+      {% for name in actuators.keys() %}
+      <option value="{{ name }}">{{ name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <button type="submit" class="btn btn-danger">Deletar</button>
+</form>
+{% endblock %}
